@@ -1,0 +1,29 @@
+{
+  "UseInMemoryDatabase": false, // Application.IntegrationTests are not designed to work with InMemory database.
+  "ConnectionStrings": {
+    "DefaultConnection": "Server=localhost;User Id=sa;Password=sa;Database=CommandsRegistryTestDb;MultipleActiveResultSets=true;"
+  },
+  "Application": {
+		"FrontendUrl": "http://localhost:8080"
+	},
+  "Logging": {
+    "LogLevel": {
+      "Default": "Debug",
+      "System": "Information",
+      "Microsoft": "Information"
+    }
+  },
+  "Mail": {
+    "ServerAddress": "smtp.mailtrap.io",
+    "ServerPort": 2525,
+    "MailFrom": "no-reply@app.com",
+    "ServerLogin": "XXXXXXXXXXX",
+    "ServerPassword": "XXXXXXXXXXX",
+    "TemplatesPath": "MailTemplates/",
+    "ChunkSize": 50
+  },
+  "ConfirmationEmailConfiguration": {
+    "Subject": "Your WeatherApp account is almost there!",
+    "PathToTemplate": "email_confirmation.html"
+  }
+}

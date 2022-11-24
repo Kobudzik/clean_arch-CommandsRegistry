@@ -1,0 +1,35 @@
+{
+	"UseInMemoryDatabase": false,
+	"ConnectionStrings": {
+		"DefaultConnection": "Server=.;Database=CommanderAppDb;Trusted_Connection=True;MultipleActiveResultSets=true;",
+	},
+	"Application": {
+		"FrontendUrl": "XXXXXXXXXXX"
+	},
+	"Logging": {
+		"LogLevel": {
+			"Default": "Warning",
+			"Hangfire": "Information"
+		}
+	},
+	"AllowedHosts": "*",
+	"TokenConfiguration": {
+		"Secret": "XXXXXXXXXXXXXX",
+		"Issuer": "localhost:5001",
+		"Audience": "DeveloperAudience",
+		"AccessExpirationInMinutes": 1440,
+		"RefreshExpirationInMinutes": 120,
+		"LinksExpirationInMinutes": 15
+	},
+	"Users":{
+		"PasswordExpirationFrequency": 30
+	},
+	"Mail": {
+		"ServerAddress": "smtp.mailtrap.io",
+		"ServerPort": 2525,
+		"MailFrom": "no-reply@app.com",
+		"ServerLogin": "XXXXXXXXXXXXXX",
+		"ServerPassword": "XXXXXXXXXXXXXX",
+		"TemplatesPath": "MailTemplates/"
+	},
+}
