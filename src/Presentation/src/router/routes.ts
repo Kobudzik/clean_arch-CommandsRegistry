@@ -26,9 +26,9 @@ const routes: Array<RouteConfig> = [
         component: () => import(/* webpackChunkName: "home-register-form" */ "../components/layout/PageLayout.vue"),
         children: [
             {
-                path: "/about",
-                name: "about",
-                component: () => import(/* webpackChunkName: "about" */ "../views/About.vue"),
+                path: "/commands",
+                name: "commands",
+                component: () => import(/* webpackChunkName: "commands" */ "../views/Commands.vue"),
             },
             {
                 path: "/users",

@@ -15,7 +15,7 @@
                 <!-- Logo -->
                 <div v-if="!phone" class="mb-4 mt-2 header-wrapper">
                     <img src="/static/app-logo.webp" class="logo-image" alt="logo" />
-                    <span v-if="!menuCollapsed" class="my-auto app-name"> CommandsRegistry </span>
+                    <span v-if="!menuCollapsed" class="my-auto app-name"> Commands Registry </span>
                 </div>
             </template>
             <!-- Footer -->
@@ -143,8 +143,7 @@ img {
     }
 
     & > .app-name {
-        font-family: "Fredoka One", cursive;
-        font-size: 1.7rem;
+        font-size: 1.5rem;
     }
 }
 

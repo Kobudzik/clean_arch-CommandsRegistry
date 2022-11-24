@@ -35,7 +35,7 @@ export default class UserLogin extends Vue {
         var isSuccess = await AuthService.Login(this.form);
 
         if (isSuccess) {
-            if (this.$route.name != "home") this.$router.push({ name: "about" });
+            if (this.$route.name != "home") this.$router.push({ name: "commands" });
 
             this.$emit("login-successful");
             this.$toast("Login succesful. Hello " + this.$store.getters[UserGetters.GET_CURRENT_USER_NAME] + " :)"), undefined, 1000;

@@ -17,5 +17,5 @@ import ContentWrapper from "@/components/layout/ContentWrapper.vue";
         ContentWrapper,
     },
 })
-export default class About extends Vue {}
+export default class Commands extends Vue {}
 </script>

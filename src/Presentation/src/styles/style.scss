@@ -45,7 +45,7 @@
     background-color: var(--primary-color);
 }
 
-//BUTTONS
+// #region BUTTONS
 .btn-success.themed,
 .btn-success.disabled.themed {
     background-color: var(--primary-color);
@@ -64,6 +64,12 @@
     box-shadow: 0 0 0 0.2rem var(--primary-color) !important;
     border-color: var(--primary-color);
 }
+
+.page-link{
+    background-color: var(--primary-color) !important;
+    color:white !important;
+}
+// #endregion BUTTONS
 
 .row {
     margin-left: 0px;

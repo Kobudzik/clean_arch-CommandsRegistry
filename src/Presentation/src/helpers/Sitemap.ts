@@ -3,8 +3,8 @@ import { UserRole } from "@/helpers/Enums";
 
 export const sitemapItems: SidebarItem[] = [
     {
-        title: "About",
-        href: { path: "about" },
+        title: "Commands",
+        href: { path: "commands" },
         icon: {
             element: "b-icon-info-circle",
         },

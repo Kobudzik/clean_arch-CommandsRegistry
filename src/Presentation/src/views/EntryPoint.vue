@@ -3,7 +3,7 @@
         <div class="d-flex flex-column flex-md-row align-items-center align-self-center justify-content-center">
             <img src="/static/app-logo.webp" class="logo-image" alt="logo" />
             <div class="d-flex flex-column">
-                <span class="my-auto ml-3 app-name-version"> CommandsRegistry</span>
+                <span class="my-auto ml-3 app-name-version"> Commands Registry</span>
                 <p class="version-font m-0">v1.0.0</p>
             </div>
         </div>

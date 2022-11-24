@@ -39,9 +39,7 @@
                     </form>
                 </ContentWrapper>
                 <ContentWrapper class="mt-3">
-                    <template #subtitle> User's settings</template>
-                    <p class="mb-0 mt-3">Default place:</p>
-                    <div class="d-flex justify-content-end mt-5">
+                    <div class="d-flex justify-content-end">
                         <b-button variant="danger" @click="remove(form.id)" class="themed py-2 px-3">
                             <i class="fas fa-trash fa-sm"></i>
                             Remove acount
@@ -50,15 +48,6 @@
                             <i class="fas fa-save"></i>
                             Save changes
                         </b-button>
-                    </div>
-                </ContentWrapper>
-            </div>
-            <!-- column 2 -->
-            <div class="col-12 col-lg-6 mt-4 mt-lg-0">
-                <ContentWrapper>
-                    <template #subtitle> Subscribed localizations </template>
-                    <div class="p-2">
-                        <AppList :items="form.subscribedPlaces" :nameGetter="(place) => $options.filters.asPlaceString(place)" id-prop="geoNameId" />
                     </div>
                 </ContentWrapper>
             </div>
@@ -77,7 +66,6 @@ import UserService from "@/services/User/UserService";
 import { UserFormModel, UpdateUserModel } from "@/services/User/UserModels";
 import Form from "@/helpers/Form";
 import { UserRole } from "@/helpers/Enums";
-import SimpleList from "@/components/common/SimpleList.vue";
 import AppList from "@/components/common/AppList.vue";
 import ThemePicker from "@/components/common/ThemePicker.vue";
 import AuthService from "@/services/Auth/AuthService";
@@ -86,7 +74,6 @@ import ContentWrapper from "@/components/layout/ContentWrapper.vue";
 @Component({
     name: "UserForm",
     components: {
-        SimpleList,
         AppList,
         ThemePicker,
         ContentWrapper,

@@ -7,6 +7,7 @@ import createPersistedState from "vuex-persistedstate";
 
 //filters
 import users from "@/store/filters/users";
+import commands from "@/store/filters/commands";
 
 Vue.use(Vuex);
 
@@ -20,6 +21,7 @@ export default new Vuex.Store({
             namespaced: true,
             modules: {
                 users,
+                commands,
             },
         },
     },
