@@ -87,7 +87,7 @@ namespace CommandsRegistry.Application.IntegrationTests
                 var userManager = scope.ServiceProvider.GetRequiredService<UserManager<UserAccount>>();
                 var roleManager = scope.ServiceProvider.GetRequiredService<RoleManager<IdentityRole>>();
 
-                context.Database.Migrate();
+                await context.Database.MigrateAsync();
                 await ApplicationDbContextSeed.SeedDefaultUserAndRolesAsync(userManager, roleManager);
             }
         }

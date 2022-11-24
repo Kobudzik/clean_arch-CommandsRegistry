@@ -64,7 +64,7 @@ namespace CommandsRegistry.WebUI
 
                 loggingBuilder.AddFile(
                     "logs/app_{0:yyyy}-{0:MM}-{0:dd}.log",
-                    fileLoggerOpts => fileLoggerOpts.FormatLogFileName = fName => String.Format(fName, DateTime.Now)
+                    fileLoggerOpts => fileLoggerOpts.FormatLogFileName = fName => string.Format(fName, DateTime.Now)
                 );
             });
 

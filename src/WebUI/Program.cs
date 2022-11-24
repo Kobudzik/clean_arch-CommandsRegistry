@@ -7,7 +7,6 @@ using Microsoft.Extensions.Logging;
 using System;
 using System.Threading.Tasks;
 using CommandsRegistry.Domain.Entities.Core;
-using CommandsRegistry.Infrastructure.Identity;
 using CommandsRegistry.Infrastructure.Persistence;
 using Microsoft.Extensions.Configuration;
 
@@ -38,7 +37,7 @@ namespace CommandsRegistry.WebUI
                     var context = services.GetRequiredService<ApplicationDbContext>();
 
                     if (context.Database.IsSqlServer())
-                        context.Database.Migrate();
+                        await context.Database.MigrateAsync();
 
                     var userManager = services.GetRequiredService<UserManager<UserAccount>>();
                     var roleManager = services.GetRequiredService<RoleManager<IdentityRole>>();
