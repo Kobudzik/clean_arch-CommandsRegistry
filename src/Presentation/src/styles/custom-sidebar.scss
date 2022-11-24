@@ -1,0 +1,42 @@
+@import "@/styles/style.scss";
+$base-bg: #ffffff;
+
+//item
+$item-color: black;
+
+$item-active-color: null;
+$item-active-bg: null;
+
+$item-open-color: #fff;
+$item-open-bg: null;
+
+$item-hover-color: null;
+$item-hover-bg: gray;
+
+//icon
+$icon-color: black;
+$icon-bg: transparent;
+
+$icon-active-color: null;
+$icon-active-bg: null;
+
+$icon-open-color: null;
+$icon-open-bg: $item-open-bg;
+
+//mobile
+$mobile-item-color: null;
+$mobile-item-bg: null;
+$mobile-icon-color: null;
+$mobile-icon-bg: null;
+
+//dropdown
+$dropdown-bg: lighten($base-bg, 5%);
+$dropdown-color: null;
+
+//sizes
+$item-font-size: 1rem;
+$item-line-height: 0.8rem;
+$item-padding: 1rem;
+$icon-height: 1.5rem;
+$icon-width: 2rem;
+$icon-padding-left: 1.2rem;

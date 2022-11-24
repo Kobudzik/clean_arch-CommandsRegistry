@@ -1,0 +1,44 @@
+# Node.js with Vue
+# Build a Node.js project that uses Vue.
+# Add steps that analyze code, save build artifacts, deploy, and more:
+# https://docs.microsoft.com/azure/devops/pipelines/languages/javascript
+
+trigger:
+- develop
+
+pool:
+  vmImage: ubuntu-latest
+
+steps:
+- task: NodeTool@0
+  inputs:
+    versionSpec: '16.x'
+  displayName: 'Install Node.js'
+
+- script: |
+    npm install
+    npm run build
+  displayName: 'npm install and build'
+
+- task: CopyFiles@2
+  displayName: Copy build files
+  inputs:
+    Contents: 'dist/**' # Pull the build directory
+    TargetFolder: '$(Build.ArtifactStagingDirectory)'
+
+- task: CopyFiles@2
+  displayName: Copy web.config
+  inputs:
+    Contents: 'web.config'
+    TargetFolder: '$(Build.ArtifactStagingDirectory)/dist'
+  
+- task: CopyFiles@2
+  displayName: Copy .htaccess
+  inputs:
+    Contents: '.htaccess'
+    TargetFolder: '$(Build.ArtifactStagingDirectory)/dist'
+
+- task: PublishBuildArtifacts@1
+  inputs: 
+    PathtoPublish: $(Build.ArtifactStagingDirectory) # dist or build files
+    ArtifactName: 'FrontendPipelineOutput' # output artifact
