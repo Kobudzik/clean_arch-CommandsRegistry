@@ -1,4 +1,5 @@
-﻿using CommandsRegistry.Application.Common.Interfaces.JsonCommands;
+﻿using System;
+using CommandsRegistry.Application.Common.Interfaces.JsonCommands;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading;
@@ -35,6 +36,7 @@ namespace CommandsRegistry.Infrastructure.JsonCommands.CommandEntries
                 Name = name,
                 JsonSchema = jsonSchema
             };
+
             await _context.CommandEntries.AddAsync(entity);
             await _context.SaveChangesAsync(CancellationToken.None);
 

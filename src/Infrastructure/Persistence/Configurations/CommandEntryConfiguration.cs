@@ -10,6 +10,7 @@ namespace CommandsRegistry.Infrastructure.Persistence.Configurations
         {
             builder.Property(t => t.JsonSchema)
                 .HasMaxLength(8000);
+            builder.HasIndex(x => x.Name).IsUnique();
         }
     }
 }

@@ -1,5 +1,8 @@
-﻿using System.Threading;
+﻿using System;
+using System.Data.Entity.Infrastructure;
+using System.Threading;
 using System.Threading.Tasks;
+using CommandsRegistry.Application.Common.Exceptions;
 using CommandsRegistry.Application.Common.Interfaces.JsonCommands;
 using MediatR;
 
@@ -21,8 +24,15 @@ namespace CommandsRegistry.Application.JsonCommands.Commands.CreateCommandEntry
 
             public async Task<int> Handle(CreateCommandEntryCommand request, CancellationToken cancellationToken)
             {
-                var commandEntry = await _commandsEntriesRepository.CreateAsync(request.Name, request.JsonSchema);
-                return commandEntry.Id;
+                try
+                {
+                    var commandEntry = await _commandsEntriesRepository.CreateAsync(request.Name, request.JsonSchema);
+                    return commandEntry.Id;
+                }
+                catch (Exception ex) when (ex.InnerException?.Message.Contains("Cannot insert duplicate key row") == true)
+                {
+                    throw new CustomValidationException(nameof(request.Name), "Selected command name is already taken!");
+                }
             }
         }
     }
