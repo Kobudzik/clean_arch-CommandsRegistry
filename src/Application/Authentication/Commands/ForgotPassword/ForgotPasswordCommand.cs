@@ -1,9 +1,9 @@
 ﻿using System.Threading;
 using System.Threading.Tasks;
-using CommandsRegistry.Application.Common.Interfaces;
+using CommandsRegistry.Application.Common.Interfaces.User;
 using MediatR;
 
-namespace CommandsRegistry.Application.Authentication.Commands.ConfirmAccount.ForgotPassword
+namespace CommandsRegistry.Application.Authentication.Commands.ForgotPassword
 {
     public sealed class ForgotPasswordCommand : IRequest
     {

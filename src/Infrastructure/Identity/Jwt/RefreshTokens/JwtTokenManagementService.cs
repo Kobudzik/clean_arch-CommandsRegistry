@@ -20,8 +20,7 @@ namespace CommandsRegistry.Infrastructure.Identity.Jwt.RefreshTokens
         public JwtTokenManagementService(ITokenConfiguration tokenConfiguration)
         {
             this.tokenConfiguration = tokenConfiguration;
-            if (jwtSecurityTokenHandler == null)
-                jwtSecurityTokenHandler = new JwtSecurityTokenHandler();
+            jwtSecurityTokenHandler ??= new JwtSecurityTokenHandler();
         }
 
         public Guid GetUserIdFromToken(string accessToken)

@@ -1,4 +1,5 @@
 ﻿using System;
+using CommandsRegistry.Domain.Entities.Core;
 using CommandsRegistry.Infrastructure.Identity.Users.Errors;
 using CommandsRegistry.Infrastructure.Persistence;
 using Microsoft.AspNetCore.Identity;

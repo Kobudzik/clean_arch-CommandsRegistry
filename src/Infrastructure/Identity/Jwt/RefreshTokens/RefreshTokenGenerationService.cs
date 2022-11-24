@@ -3,7 +3,9 @@ using System.Security.Cryptography;
 using System.Threading.Tasks;
 using CommandsRegistry.Application.Authentication;
 using CommandsRegistry.Domain.Entities;
+using CommandsRegistry.Domain.Entities.Core;
 using CommandsRegistry.Infrastructure.Identity.Jwt.Configuration;
+using CommandsRegistry.Infrastructure.Identity.Jwt.RefreshTokens.Repository;
 
 namespace CommandsRegistry.Infrastructure.Identity.Jwt.RefreshTokens
 {

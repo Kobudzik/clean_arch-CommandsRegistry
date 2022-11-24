@@ -4,6 +4,7 @@ using CommandsRegistry.Application.Authentication;
 using CommandsRegistry.Infrastructure.Identity.Jwt.Configuration;
 using CommandsRegistry.Infrastructure.Identity.Jwt.Policies;
 using CommandsRegistry.Infrastructure.Identity.Jwt.RefreshTokens;
+using CommandsRegistry.Infrastructure.Identity.Jwt.RefreshTokens.Repository;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;

@@ -12,6 +12,8 @@ using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 using CommandsRegistry.Application.Common.Interfaces;
+using CommandsRegistry.Application.Common.Interfaces.User;
+using CommandsRegistry.Domain.Entities.Core;
 using CommandsRegistry.Infrastructure.Identity;
 using CommandsRegistry.Infrastructure.Persistence;
 using CommandsRegistry.WebUI;

@@ -2,6 +2,7 @@
 using System.Threading.Tasks;
 using CommandsRegistry.Application.Common.Interfaces.Email.User.ConfirmEmail;
 using CommandsRegistry.Infrastructure.Configuration;
+using CommandsRegistry.Infrastructure.Configuration.Application;
 using CommandsRegistry.Infrastructure.Email.Core;
 using CommandsRegistry.Infrastructure.Email.Core.TemplateReader;
 using CommandsRegistry.Infrastructure.Email.Modules.User.ConfirmEmail.Configuration;

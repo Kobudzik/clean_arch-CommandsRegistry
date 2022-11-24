@@ -1,5 +1,6 @@
 ﻿using CommandsRegistry.Application.Common.Interfaces;
 using CommandsRegistry.Infrastructure.Configuration;
+using CommandsRegistry.Infrastructure.Configuration.Application;
 using CommandsRegistry.Infrastructure.Persistence;
 using CommandsRegistry.Infrastructure.Services;
 using CommandsRegistry.Infrastructure.Identity;

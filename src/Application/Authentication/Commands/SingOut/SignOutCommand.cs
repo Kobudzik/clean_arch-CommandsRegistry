@@ -2,7 +2,7 @@
 using System.Threading.Tasks;
 using MediatR;
 
-namespace CommandsRegistry.Application.Authentication.Commands.SignOut
+namespace CommandsRegistry.Application.Authentication.Commands.SingOut
 {
     public class SignOutCommand : IRequest
     {

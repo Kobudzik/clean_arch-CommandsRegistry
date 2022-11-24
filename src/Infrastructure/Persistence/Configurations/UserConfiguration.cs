@@ -1,4 +1,5 @@
 ﻿using CommandsRegistry.Infrastructure.Identity;
+using CommandsRegistry.Domain.Entities.Core;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 

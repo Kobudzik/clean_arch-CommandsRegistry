@@ -1,4 +1,5 @@
 ﻿using CommandsRegistry.Application.Common.Interfaces;
+using CommandsRegistry.Application.Common.Interfaces.User;
 using Moq;
 
 //Tests todo

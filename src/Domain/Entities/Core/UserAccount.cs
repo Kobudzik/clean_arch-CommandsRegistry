@@ -1,7 +1,7 @@
-﻿using Microsoft.AspNetCore.Identity;
-using System;
+﻿using System;
+using Microsoft.AspNetCore.Identity;
 
-namespace CommandsRegistry.Infrastructure.Identity
+namespace CommandsRegistry.Domain.Entities.Core
 {
     public class UserAccount : IdentityUser
     {

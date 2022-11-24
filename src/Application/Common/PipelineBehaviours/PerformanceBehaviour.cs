@@ -1,12 +1,12 @@
-﻿using MediatR;
-using Microsoft.Extensions.Logging;
+﻿using System;
 using System.Diagnostics;
 using System.Threading;
 using System.Threading.Tasks;
-using System;
-using CommandsRegistry.Application.Common.Interfaces;
+using CommandsRegistry.Application.Common.Interfaces.User;
+using MediatR;
+using Microsoft.Extensions.Logging;
 
-namespace CommandsRegistry.Application.Common.Behaviours
+namespace CommandsRegistry.Application.Common.PipelineBehaviours
 {
     public class PerformanceBehaviour<TRequest, TResponse> : IPipelineBehavior<TRequest, TResponse>
     {

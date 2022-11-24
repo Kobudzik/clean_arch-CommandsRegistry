@@ -1,5 +1,6 @@
 ﻿using CommandsRegistry.Application.Authentication;
 using CommandsRegistry.Application.Common.Interfaces;
+using CommandsRegistry.Application.Common.Interfaces.User;
 using CommandsRegistry.Infrastructure.Identity.Users.Services;
 using Microsoft.Extensions.DependencyInjection;
 

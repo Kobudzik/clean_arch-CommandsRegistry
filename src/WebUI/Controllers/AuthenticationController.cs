@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using CommandsRegistry.Application.Authentication.Commands.ConfirmEmail;
 using CommandsRegistry.Application.Authentication.Commands.SignIn;
 using CommandsRegistry.Infrastructure.Configuration;
+using CommandsRegistry.Infrastructure.Configuration.Application;
 using CommandsRegistry.WebUI.DTO.Authentication;
 using CommandsRegistry.WebUI.DTO.Errors;
 

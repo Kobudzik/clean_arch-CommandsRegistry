@@ -1,5 +1,5 @@
 ﻿using CommandsRegistry.Application.Common.Mappings;
-using CommandsRegistry.Infrastructure.Identity;
+using CommandsRegistry.Domain.Entities.Core;
 
 namespace CommandsRegistry.Application.Users.Queries.GetUserSettings
 {

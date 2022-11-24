@@ -9,11 +9,11 @@ using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
 using System;
 using System.Net.NetworkInformation;
-using CommandsRegistry.Application.Common.Interfaces;
 using CommandsRegistry.Infrastructure.Persistence;
 using CommandsRegistry.WebUI.Filters;
 using CommandsRegistry.WebUI.Services;
 using CommandsRegistry.Application;
+using CommandsRegistry.Application.Common.Interfaces.User;
 using CommandsRegistry.Infrastructure;
 using CommandsRegistry.Infrastructure.Email;
 

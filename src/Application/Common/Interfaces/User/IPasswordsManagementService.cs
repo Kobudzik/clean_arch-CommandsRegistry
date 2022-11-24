@@ -2,7 +2,7 @@
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace CommandsRegistry.Application.Common.Interfaces
+namespace CommandsRegistry.Application.Common.Interfaces.User
 {
     public interface IPasswordsManagementService
     {

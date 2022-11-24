@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Identity;
 using System.Linq;
 using System.Threading.Tasks;
+using CommandsRegistry.Domain.Entities.Core;
 using CommandsRegistry.Infrastructure.Identity;
 
 namespace CommandsRegistry.Infrastructure.Persistence

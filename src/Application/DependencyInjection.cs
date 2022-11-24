@@ -3,7 +3,7 @@ using FluentValidation;
 using MediatR;
 using Microsoft.Extensions.DependencyInjection;
 using System.Reflection;
-using CommandsRegistry.Application.Common.Behaviours;
+using CommandsRegistry.Application.Common.PipelineBehaviours;
 
 namespace CommandsRegistry.Application
 {

@@ -1,6 +1,6 @@
 ﻿using FluentValidation;
 
-namespace CommandsRegistry.Application.Authentication.Commands.ConfirmAccount.ForgotPassword
+namespace CommandsRegistry.Application.Authentication.Commands.ForgotPassword
 {
     public class ForgotPasswordCommandValidator : AbstractValidator<ForgotPasswordCommand>
     {

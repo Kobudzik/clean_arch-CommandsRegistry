@@ -18,7 +18,7 @@ namespace CommandsRegistry.WebUI.Controllers
             => await _healthCheckService.CheckHealthAsync();
 
         [HttpGet("version")]
-        public async Task<ActionResult<string>> GetVersion() 
+        public ActionResult<string> GetVersion() 
             => "1.0.0";
     }
 }

@@ -2,7 +2,8 @@
 using System.Threading;
 using System.Threading.Tasks;
 using CommandsRegistry.Application.Common.Interfaces;
-using CommandsRegistry.Application.Users.Commands.CreateUser.UpdateUser;
+using CommandsRegistry.Application.Common.Interfaces.User;
+using CommandsRegistry.Application.Users.Commands.UpdateUser.Request;
 using MediatR;
 
 namespace CommandsRegistry.Application.Users.Commands.UpdateUser

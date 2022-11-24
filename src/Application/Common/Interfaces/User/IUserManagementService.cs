@@ -4,12 +4,12 @@ using System.Threading.Tasks;
 using CommandsRegistry.Application.Authentication.DTOs;
 using CommandsRegistry.Application.Common.Models;
 using CommandsRegistry.Application.Users.Commands.CreateUser.Request;
-using CommandsRegistry.Application.Users.Commands.CreateUser.UpdateUser;
+using CommandsRegistry.Application.Users.Commands.UpdateUser.Request;
 using CommandsRegistry.Application.Users.Queries.GetAllUsers;
 using CommandsRegistry.Application.Users.Queries.GetUserSettings;
-using CommandsRegistry.Infrastructure.Identity;
+using CommandsRegistry.Domain.Entities.Core;
 
-namespace CommandsRegistry.Application.Common.Interfaces
+namespace CommandsRegistry.Application.Common.Interfaces.User
 {
     public interface IUserManagementService
     {

@@ -2,7 +2,7 @@
 using System.Security.Claims;
 using System;
 using System.Linq;
-using CommandsRegistry.Application.Common.Interfaces;
+using CommandsRegistry.Application.Common.Interfaces.User;
 using CommandsRegistry.Domain.Enums;
 
 namespace CommandsRegistry.WebUI.Services

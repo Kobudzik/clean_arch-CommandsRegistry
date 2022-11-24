@@ -5,7 +5,7 @@ using System;
 using System.Threading.Tasks;
 using System.Collections.Generic;
 using CommandsRegistry.Application.Authentication.DTOs;
-using CommandsRegistry.Application.Common.Interfaces;
+using CommandsRegistry.Application.Common.Interfaces.User;
 using CommandsRegistry.Application.Common.Models;
 using CommandsRegistry.Application.Users.Commands.ChangeUserPassword;
 using CommandsRegistry.Application.Users.Commands.CreateUser;

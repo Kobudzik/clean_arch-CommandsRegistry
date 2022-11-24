@@ -6,6 +6,7 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using System;
 using System.Threading.Tasks;
+using CommandsRegistry.Domain.Entities.Core;
 using CommandsRegistry.Infrastructure.Identity;
 using CommandsRegistry.Infrastructure.Persistence;
 using Microsoft.Extensions.Configuration;
@@ -23,11 +24,8 @@ namespace CommandsRegistry.WebUI
               .Build();
 
             var defaultConnectionString = config.GetConnectionString("DefaultConnection");
-            var hangfireConnectionString = config.GetConnectionString("HangfireConnection");
 
-            var connectionStringInfo =
-              $"Default Connection string: '{defaultConnectionString}'." +
-              $"Hangfire Connection string: '{hangfireConnectionString}'.";
+            var connectionStringInfo = $"Default Connection string: '{defaultConnectionString}'.";
 
             using (var scope = host.Services.CreateScope())
             {
@@ -50,7 +48,6 @@ namespace CommandsRegistry.WebUI
                 catch (Exception ex)
                 {
                     logger.LogError(ex, "An error occurred while migrating or seeding the database.");
-
                     throw new ApplicationException(connectionStringInfo, ex);
                 }
             }

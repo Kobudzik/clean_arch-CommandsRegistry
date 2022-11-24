@@ -7,6 +7,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Reflection;
 using CommandsRegistry.Application.Common.Interfaces;
+using CommandsRegistry.Application.Common.Interfaces.User;
 using CommandsRegistry.Domain.Common;
 using CommandsRegistry.Domain.Entities;
 using CommandsRegistry.Infrastructure.Identity;

@@ -3,6 +3,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using CommandsRegistry.Application.Common.Exceptions;
 using CommandsRegistry.Application.Common.Interfaces;
+using CommandsRegistry.Application.Common.Interfaces.User;
 using CommandsRegistry.Application.Users.Commands.CreateUser.Request;
 using MediatR;
 

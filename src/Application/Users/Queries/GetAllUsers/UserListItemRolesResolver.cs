@@ -1,8 +1,9 @@
 using AutoMapper;
 using System.Linq;
 using CommandsRegistry.Application.Common.Interfaces;
-using CommandsRegistry.Infrastructure.Identity;
+using CommandsRegistry.Application.Common.Interfaces.User;
 using CommandsRegistry.Application.Users.Queries.GetAllUsers;
+using CommandsRegistry.Domain.Entities.Core;
 
 namespace CommandsRegistry.Application.Users.Queries.GetAllUsers
 {

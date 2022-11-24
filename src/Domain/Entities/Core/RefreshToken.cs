@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace CommandsRegistry.Domain.Entities
+namespace CommandsRegistry.Domain.Entities.Core
 {
     public class RefreshToken
     {

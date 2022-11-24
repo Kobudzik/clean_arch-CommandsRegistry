@@ -2,7 +2,10 @@
 using System.Threading.Tasks;
 using CommandsRegistry.Application.Authentication;
 using CommandsRegistry.Application.Common.Interfaces;
+using CommandsRegistry.Application.Common.Interfaces.User;
+using CommandsRegistry.Domain.Entities.Core;
 using CommandsRegistry.Infrastructure.Identity.Jwt.RefreshTokens;
+using CommandsRegistry.Infrastructure.Identity.Jwt.RefreshTokens.Repository;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 

@@ -1,9 +1,9 @@
-﻿using AutoMapper;
-using System;
+﻿using System;
+using AutoMapper;
 using CommandsRegistry.Application.Common.Mappings;
-using CommandsRegistry.Infrastructure.Identity;
+using CommandsRegistry.Domain.Entities.Core;
 
-namespace CommandsRegistry.Application.Users.Commands.CreateUser.UpdateUser
+namespace CommandsRegistry.Application.Users.Commands.UpdateUser.Request
 {
     public class UpdateUserModel : IMapFrom<UserAccount>
     {

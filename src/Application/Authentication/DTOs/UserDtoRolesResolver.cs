@@ -1,7 +1,8 @@
 using AutoMapper;
 using System.Linq;
 using CommandsRegistry.Application.Common.Interfaces;
-using CommandsRegistry.Infrastructure.Identity;
+using CommandsRegistry.Application.Common.Interfaces.User;
+using CommandsRegistry.Domain.Entities.Core;
 
 namespace CommandsRegistry.Application.Authentication.DTOs
 {

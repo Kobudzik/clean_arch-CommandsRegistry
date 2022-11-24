@@ -3,10 +3,10 @@ using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 using CommandsRegistry.Application.Common.Interfaces;
-using CommandsRegistry.Domain.Entities;
+using CommandsRegistry.Domain.Entities.Core;
 using Microsoft.EntityFrameworkCore;
 
-namespace CommandsRegistry.Infrastructure.Identity.Jwt.RefreshTokens
+namespace CommandsRegistry.Infrastructure.Identity.Jwt.RefreshTokens.Repository
 {
     internal class RefreshTokenRepository : IRefreshTokenRepository
     {

@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Threading.Tasks;
-using CommandsRegistry.Domain.Entities;
+using CommandsRegistry.Domain.Entities.Core;
 
-namespace CommandsRegistry.Infrastructure.Identity.Jwt.RefreshTokens
+namespace CommandsRegistry.Infrastructure.Identity.Jwt.RefreshTokens.Repository
 {
     internal interface IRefreshTokenRepository
     {

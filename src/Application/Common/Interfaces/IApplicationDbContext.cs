@@ -2,7 +2,7 @@
 using System.Threading;
 using System.Threading.Tasks;
 using CommandsRegistry.Domain.Entities;
-using CommandsRegistry.Infrastructure.Identity;
+using CommandsRegistry.Domain.Entities.Core;
 
 namespace CommandsRegistry.Application.Common.Interfaces
 {
