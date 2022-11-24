@@ -8,7 +8,7 @@
                 <b-form-input v-model="form.password" type="password" id="password" autocomplete="on" />
             </b-form-group>
             <div style="display: grid">
-                <b-button :disabled="anyFieldEmpty" variant="success" style="float: right" @click.prevent="onSubmit">Login</b-button>
+                <b-button :disabled="anyFieldEmpty" variant="success" class="themed" style="float: right" @click.prevent="onSubmit">Login</b-button>
             </div>
         </form>
     </div>

@@ -35,19 +35,20 @@ Vue.axios.interceptors.response.use(
             if (errorCode != null) {
                 if (errorCode === 400) {
                     //HIDE in production
-                    let message = "Error 400 occured. Bad request sent! ";
+                    let message = "";
+
+                    // if(process.env.NODE_ENV === 'development')
+                    //     message += "Error 400 occured. Bad request sent!"
 
                     const details = error?.response?.data;
-
                     if (details) {
-                        message += "\n" + details.title + "\n";
+                        message += details.title;
                         if (details.errors) {
                             const errorsObjects = details.errors;
 
                             //loop for property names
                             for (const property in errorsObjects) {
                                 const stringError = errorsObjects[property];
-
                                 message += "\n- " + stringError;
                             }
                         }

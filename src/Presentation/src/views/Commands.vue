@@ -3,6 +3,10 @@
         <template #header>
             <h4>Commands</h4>
         </template>
+        <b-button @click.prevent="onSubmit()" v-b-modal="'commandDetails'" variant="success" title="Save changes" class="themed py-2 px-3 mb-2">
+            <i class="fas fa-plus"></i>
+            Add
+        </b-button>
         <FilterWrapper
             @onApplyFilters="loadData()"
             @onResetFilters="
@@ -123,18 +127,12 @@ export default class Commands extends mixins(TableMixin) {
     }
 
     async remove(id: number): Promise<void> {
-        try {
-            let actionAccepted = await this.$confirm();
+        let actionAccepted = await this.$confirm();
 
-            if (actionAccepted.isConfirmed == true) {
-                this.$toast("Entry removed", undefined, 1000);
-
-                await CommandService.Remove(id);
-                this.loadData();
-            }
-        } catch {
-            this.$toast("Error during removing entry", "warning", 1000);
-            //todo
+        if (actionAccepted.isConfirmed == true) {
+            await CommandService.Remove(id);
+            await this.loadData();
+            this.$toast("Entry removed", undefined, 1000);
         }
     }
 }

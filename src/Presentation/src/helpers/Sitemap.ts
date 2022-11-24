@@ -6,7 +6,7 @@ export const sitemapItems: SidebarItem[] = [
         title: "Commands",
         href: { path: "commands" },
         icon: {
-            element: "b-icon-info-circle",
+            element: "b-icon-chat-left-dots",
         },
         badge: {
             text: "new",

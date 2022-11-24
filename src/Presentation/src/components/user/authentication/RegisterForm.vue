@@ -55,7 +55,7 @@
                 </b-form-group>
             </ValidationProvider>
             <div style="display: grid">
-                <b-button variant="success" type="submit" style="float: right">Register</b-button>
+                <b-button variant="success" type="submit" class="themed" style="float: right">Register</b-button>
             </div>
         </b-form>
     </ValidationObserver>

@@ -20,7 +20,7 @@
                     <div class="d-flex justify-content-end mt-5">
                         <b-button @click.prevent="onSubmit()" variant="success" title="Save changes" class="themed py-2 px-3 ml-1">
                             <i class="fas fa-save"></i>
-                            Save changes
+                            {{ commandId ? "Save comand" : "Add command" }}
                         </b-button>
                     </div>
                 </ContentWrapper>
@@ -53,7 +53,8 @@ export default class CommandForm extends Vue {
     });
 
     async created(): Promise<void> {
-        await this.form.ready([this.loadData()]);
+        if (this.commandId != null)
+         await this.form.ready([this.loadData()]);
     }
 
     private async loadData(): Promise<boolean> {
@@ -67,27 +68,23 @@ export default class CommandForm extends Vue {
         return true;
     }
 
-    private async onSubmit(): Promise<boolean> {
-        try {
-            let formData = this.form.data;
+    private async onSubmit(): Promise<void> {
+        let formData = this.form.data;
 
-            let request: CommandFormModel = {
-                id: formData.id,
-                name: formData.name,
-                jsonSchema: formData.jsonSchema,
-            };
+        let request: CommandFormModel = {
+            id: formData.id,
+            name: formData.name,
+            jsonSchema: formData.jsonSchema,
+        };
 
+        if(this.commandId)
             await CommandService.Update(request);
-            await this.form.ready([this.loadData()]);
-            this.$toast("Changes saved", undefined, 1000);
-        } catch (ex) {
-            this.$toast("Error during saving changes", "warning", 1000);
+        else
+            await CommandService.Create(request);
 
-            //todo only dev
-            console.log(ex);
-            return false;
-        }
-        return true;
+        this.$toast("Changes saved", undefined, 1000);
+        this.$bvModal.hide("commandDetails");
+        this.$emit("handle-load-data");
     }
 
     async cancel(): Promise<void> {
