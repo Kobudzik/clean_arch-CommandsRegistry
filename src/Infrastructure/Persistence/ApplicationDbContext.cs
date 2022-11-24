@@ -10,6 +10,8 @@ using CommandsRegistry.Application.Common.Interfaces;
 using CommandsRegistry.Application.Common.Interfaces.User;
 using CommandsRegistry.Domain.Common;
 using CommandsRegistry.Domain.Entities;
+using CommandsRegistry.Domain.Entities.Commands;
+using CommandsRegistry.Domain.Entities.Core;
 using CommandsRegistry.Infrastructure.Identity;
 using Microsoft.Extensions.Logging;
 using Microsoft.AspNetCore.Identity;
@@ -37,6 +39,7 @@ namespace CommandsRegistry.Infrastructure.Persistence
 
         public DbSet<UserAccount> UserAccounts { get; set; }
         public DbSet<RefreshToken> RefreshTokens { get; set; }
+        public DbSet<CommandEntry> CommandEntries { get; set; }
 
         public override async Task<int> SaveChangesAsync(CancellationToken cancellationToken = new CancellationToken())
         {

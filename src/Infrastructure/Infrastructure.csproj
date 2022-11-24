@@ -7,6 +7,13 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Commander\**" />
+    <EmbeddedResource Remove="Commander\**" />
+    <EntityDeploy Remove="Commander\**" />
+    <None Remove="Commander\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="LinqKit" Version="1.1.26" />
     <PackageReference Include="MailKit" Version="2.15.0" />
     <PackageReference Include="Microsoft.AspNetCore.ApiAuthorization.IdentityServer" Version="5.0.0" />

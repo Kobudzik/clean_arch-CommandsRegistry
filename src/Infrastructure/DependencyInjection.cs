@@ -9,6 +9,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using CommandsRegistry.Infrastructure.Identity.Users;
 using CommandsRegistry.Infrastructure.Identity.Jwt;
+using CommandsRegistry.Infrastructure.JsonCommands;
 
 namespace CommandsRegistry.Infrastructure
 {
@@ -52,6 +53,8 @@ namespace CommandsRegistry.Infrastructure
             services.AddUserManagementModule();
 
             services.AddSingleton<IAplicationConfiguration, AplicationConfiguration>();
+
+            services.AddJsonCommandsModule();
 
             return services;
         }

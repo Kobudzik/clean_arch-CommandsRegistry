@@ -8,9 +8,13 @@
 
   <ItemGroup>
     <Compile Remove="Commander\**" />
+    <Compile Remove="Common\Interfaces\Commander\**" />
     <EmbeddedResource Remove="Commander\**" />
+    <EmbeddedResource Remove="Common\Interfaces\Commander\**" />
     <EntityDeploy Remove="Commander\**" />
+    <EntityDeploy Remove="Common\Interfaces\Commander\**" />
     <None Remove="Commander\**" />
+    <None Remove="Common\Interfaces\Commander\**" />
   </ItemGroup>
 
   <ItemGroup>
