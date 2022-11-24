@@ -1,9 +1,10 @@
 import Vue from "vue";
 import store from "@/store/index";
 import merge from "lodash/merge";
-import { PagerContract } from "./../helpers/Pager";
+import { PagerContract } from "../../helpers/Pager";
 import { PaginatedList } from "@/helpers/Interfaces";
 import { SettingsActions } from "@/helpers/vuex-enums/SettingsEnums";
+import { UserFilterModel, UserListItemModel, UserFormModel, SettingsVM, UpdateUserModel, CreateUserModel } from "./UserModels";
 
 export default class UserService {
     public static moduleUrl = "users";
@@ -53,52 +54,4 @@ export default class UserService {
     public static async Create(userModel: CreateUserModel): Promise<UserFormModel> {
         return (await Vue.axios.post(`${this.moduleUrl}`, userModel)).data;
     }
-}
-
-export interface UserFormModel {
-    id: string;
-    userName: string;
-    email: string;
-    firstName: string;
-    lastName: string;
-    isActive: boolean;
-    roles: string[];
-    themePrimaryColor: string;
-}
-
-export interface UserListItemModel {
-    publicId: string;
-    userName: string;
-    email: string;
-    firstName: string;
-    lastName: string;
-    isActive: boolean;
-    roles: string[];
-}
-
-export interface UpdateUserModel {
-    userId: string;
-    firstName: string;
-    lastName: string;
-    themePrimaryColor: string;
-}
-
-export interface SettingsVM {
-    themePrimaryColor: string;
-}
-
-export interface UserFilterModel {
-    username: string;
-    firstName: string;
-    lastName: string;
-}
-
-export interface CreateUserModel {
-    firstName: string;
-    lastName: string;
-    userName: string;
-    email: string;
-    password: string;
-    isActive?: boolean;
-    roles?: string[];
 }

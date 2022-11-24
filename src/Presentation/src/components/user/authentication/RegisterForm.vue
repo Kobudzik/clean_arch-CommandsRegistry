@@ -63,7 +63,8 @@
 
 <script lang="ts">
 import { Component, Vue } from "vue-property-decorator";
-import UserService, { CreateUserModel } from "@/services/UserService";
+import UserService from "@/services/User/UserService";
+import { CreateUserModel } from "@/services/User/UserModels";
 import Form from "@/helpers/Form";
 import { ValidationFlags } from "vee-validate/dist/types/types";
 import { ValidationObserver, ValidationProvider, extend, localize } from "vee-validate";

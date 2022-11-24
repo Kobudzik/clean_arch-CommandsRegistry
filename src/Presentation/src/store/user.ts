@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/explicit-module-boundary-types */
 import { UserModel } from "@/helpers/AuthHelper";
 import { Commit } from "vuex";
-import AuthService from "@/services/AuthService";
+import AuthService from "@/services/Auth/AuthService";
 
 export default {
     namespaced: true,

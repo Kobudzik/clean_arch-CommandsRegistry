@@ -3,7 +3,7 @@ import Vue from "vue";
 import VueAxios from "vue-axios";
 import axios, { AxiosResponse, AxiosError } from "axios";
 import { getAuthHeaderValue } from "@/helpers/AuthHelper";
-import AuthService from "@/services/AuthService";
+import AuthService from "@/services/Auth/AuthService";
 
 Vue.use(VueAxios, axios);
 

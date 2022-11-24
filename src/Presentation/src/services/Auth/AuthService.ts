@@ -1,7 +1,8 @@
 import Vue from "vue";
 import { StorageTokenModel, setUserStateFromStorage, removeUserStateFromStore } from "@/helpers/AuthHelper";
 import router from "@/router/index";
-import UserService from "@/services/UserService";
+import UserService from "@/services/User/UserService";
+import LoginModel from "./AuthModels";
 
 export default class AuthService {
     /**
@@ -31,9 +32,4 @@ export default class AuthService {
             router.push({ name: "login" });
         }
     }
-}
-
-export interface LoginModel {
-    username: string;
-    password: string;
 }

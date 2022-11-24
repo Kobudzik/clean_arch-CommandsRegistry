@@ -70,8 +70,8 @@
 import { Component } from "vue-property-decorator";
 import { mixins } from "vue-class-component";
 import TableMixin from "@/components/common/table/TableMixin";
-
-import UserService, { UserFilterModel, UserListItemModel } from "@/services/UserService";
+import UserService from "@/services/User/UserService";
+import { UserFilterModel, UserListItemModel } from "@/services/User/UserModels";
 import SimpleList from "@/components/common/SimpleList.vue";
 import UserForm from "@/components/user/UserForm.vue";
 import Pager from "@/helpers/Pager";

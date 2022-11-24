@@ -16,7 +16,8 @@
 
 <script lang="ts">
 import { Component, Vue } from "vue-property-decorator";
-import AuthService, { LoginModel } from "@/services/AuthService";
+import AuthService from "@/services/Auth/AuthService";
+import LoginModel from "@/services/Auth/AuthModels";
 import { UserGetters } from "@/helpers/vuex-enums/UserEnums";
 
 @Component({

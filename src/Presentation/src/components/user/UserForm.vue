@@ -73,13 +73,14 @@
 
 <script lang="ts">
 import { Component, Vue, Prop } from "vue-property-decorator";
-import UserService, { UpdateUserModel, UserFormModel } from "@/services/UserService";
+import UserService from "@/services/User/UserService";
+import { UserFormModel, UpdateUserModel } from "@/services/User/UserModels";
 import Form from "@/helpers/Form";
 import { UserRole } from "@/helpers/Enums";
 import SimpleList from "@/components/common/SimpleList.vue";
 import AppList from "@/components/common/AppList.vue";
 import ThemePicker from "@/components/common/ThemePicker.vue";
-import AuthService from "@/services/AuthService";
+import AuthService from "@/services/Auth/AuthService";
 import ContentWrapper from "@/components/layout/ContentWrapper.vue";
 
 @Component({

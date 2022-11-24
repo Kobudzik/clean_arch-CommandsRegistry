@@ -23,7 +23,7 @@ import { Component, Vue } from "vue-property-decorator";
 import LoginForm from "@/components/user/authentication/LoginForm.vue";
 import RegisterForm from "@/components/user/authentication/RegisterForm.vue";
 import { Option } from "@/helpers/Interfaces";
-import AuthService from "@/services/AuthService";
+import AuthService from "@/services/Auth/AuthService";
 import AppTabs from "@/components/common/AppTabs.vue";
 import ContentWrapper from "@/components/layout/ContentWrapper.vue";
 

@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/explicit-module-boundary-types */
-import { UserFilterModel } from "./../../services/UserService";
+import { UserFilterModel } from "@/services/User/UserModels";
 import Form from "@/helpers/Form";
 import Pager from "@/helpers/Pager";
 
