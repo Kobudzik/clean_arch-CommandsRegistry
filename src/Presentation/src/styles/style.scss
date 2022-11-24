@@ -4,8 +4,8 @@
 @import "bootstrap/scss/_mixins.scss";
 
 :root {
-    --primary-color: rgb(107, 187, 70);
-    --primary-color-rgb: 107, 187, 0;
+    --primary-color: rgb(58, 107, 151);
+    --primary-color-rgb: 58, 107, 151;
 }
 
 .themed-color-dark {
@@ -65,9 +65,14 @@
     border-color: var(--primary-color);
 }
 
-.page-link{
+.page-item.active button{
     background-color: var(--primary-color) !important;
     color:white !important;
+}
+
+
+.page-item.active .page-link{
+    border-color: lightgray!important;
 }
 // #endregion BUTTONS
 
@@ -216,3 +221,21 @@
 .sr-only {
     width: 0;
 }
+
+// #region SWAL
+.swal2-popup.swal2-toast .swal2-success
+{
+    color: var(--primary-color)!important;
+    border-color: var(--primary-color)!important;
+}
+
+.swal2-icon.swal2-success [class^=swal2-success-line]
+{
+    background-color: var(--primary-color)!important;
+}
+
+
+.swal2-icon.swal2-success .swal2-success-ring{
+    border-color: lightgray !important
+}
+// #endregion SWAL

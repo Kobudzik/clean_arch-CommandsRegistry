@@ -5,11 +5,11 @@ kind: Pod
 metadata:
     name: nodehelloworld.example.com
     labels:
-        app: CommandsRegistry
+        app: EasyCommands
     
 spec:
         containers:
-        -   name: k8s-CommandsRegistry
+        -   name: k8s-EasyCommands
             image: aikain/simplehttpserver:0.1
             ports:
             - containerPort: 3000

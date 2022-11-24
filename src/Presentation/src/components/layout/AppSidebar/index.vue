@@ -15,7 +15,7 @@
                 <!-- Logo -->
                 <div v-if="!phone" class="mb-4 mt-2 header-wrapper">
                     <img src="/static/app-logo.webp" class="logo-image" alt="logo" />
-                    <span v-if="!menuCollapsed" class="my-auto app-name"> Commands Registry </span>
+                    <span v-if="!menuCollapsed" class="my-auto app-name"> Easy Commands </span>
                 </div>
             </template>
             <!-- Footer -->
@@ -139,10 +139,12 @@ img {
     justify-content: center;
 
     & > .logo-image {
-        width: 4rem;
+        width: 5rem;
+        margin: 0 10px 0 10px;
     }
 
     & > .app-name {
+        font-family: "Orbitron", cursive;
         font-size: 1.5rem;
     }
 }
