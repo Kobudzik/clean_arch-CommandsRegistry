@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 using CommandsRegistry.Application.Common.Exceptions;
 using CommandsRegistry.Application.Users.Commands.CreateUser;
 using CommandsRegistry.Application.Users.Commands.UpdateUser;
+using CommandsRegistry.Domain.Entities.Core;
 using CommandsRegistry.Domain.Enums;
-using CommandsRegistry.Infrastructure.Identity;
 
 namespace CommandsRegistry.Application.IntegrationTests.Users.Commands
 {

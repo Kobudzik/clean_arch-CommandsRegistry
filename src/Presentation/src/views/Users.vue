@@ -51,7 +51,7 @@
                     <b-button variant="success" v-b-modal="'userDetails'" @click="pickedUserId = data.item.id" class="themed px-2">
                         <i class="fas fa-info-circle fa-sm"></i>
                     </b-button>
-                    <b-button variant="danger" @click="remove(data.item.publicId)" class="themed ml-1 px-2">
+                    <b-button variant="danger" @click="remove(data.item.id)" class="themed ml-1 px-2">
                         <i class="fas fa-trash fa-sm"></i>
                     </b-button>
                 </div>
