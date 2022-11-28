@@ -1,5 +1,6 @@
 {
 	"UseInMemoryDatabase": false,
+	"Urls": "http://host.docker.internal:80",
 	"ConnectionStrings": {
 		"DefaultConnection": "Server=.;Database=CommanderAppDb;Trusted_Connection=True;MultipleActiveResultSets=true;",
 	},

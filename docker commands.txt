@@ -1,0 +1,20 @@
+docker login -u valky143 -p dckr_pat_nyKYGNuhabhubFtm6uX7XPPTAyA
+
+docker build . -t valky143/commander-backend:1.0
+
+docker push valky143/commander-backend:1.0
+
+
+HTTP:
+  docker run --rm -p 80:80 valky143/commander-backend:1.0
+
+HTTPS:
+  docker run -it -p 81:81 -e ASPNETCORE_Kestrel__Certificates__Default__Password="secret123" -e ASPNETCORE_Kestrel__Certificates__Default__Path=aspnetapp.pfx valky143/commander-backend:1.0.18
+
+
+
+// aspnet core port optional?
+  //docker run --rm -p 80:80 -e ASPNETCORE_HTTP_PORT=http://+:80 commander-backend:1.0.15
+
+//didnt check if works
+    -e ConnectionStrings=Server=10.99.14.58;Database=HackatonCommandsManagerDb;User Id=hackatoncm;Password=HACKATONCM!@#123a;MultipleActiveResultSets=true;Trust Server Certificate=true;Integrated Security=false;Encrypt=false;

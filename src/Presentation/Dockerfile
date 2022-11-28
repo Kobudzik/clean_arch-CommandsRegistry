@@ -1,13 +1,11 @@
-#build stage
-	FROM node:lts-alpine as build-stage
+	FROM node:16.18.1 as build-stage
 	WORKDIR /app
 	COPY package*.json ./
 	RUN yarn install
 	COPY . .
 	RUN yarn build
 
-#production stage
-	FROM nginx:stable-alpine as production-stage
+	FROM nginx:1.21 as production-stage
 	RUN rm /etc/nginx/conf.d/default.conf
 	COPY nginx.conf /etc/nginx/conf.d
 	COPY --from=build-stage /app/dist /usr/share/nginx/html

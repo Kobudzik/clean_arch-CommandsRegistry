@@ -1,12 +1,11 @@
-FROM mcr.microsoft.com/dotnet/sdk:5.0 AS build
+FROM mcr.microsoft.com/dotnet/sdk:5.0 AS buildStage
 COPY /src /app
 WORKDIR /app
-RUN dotnet build WebUI/WebUI.csproj -c Release -o output
-
-#mcr.microsoft.com/dotnet/aspnet:5.0
-#mcr.microsoft.com/dotnet/runtime:5.0
+RUN dotnet build WebUI/WebUI.csproj -c Release -o buildOutputDir
 
 FROM mcr.microsoft.com/dotnet/aspnet:5.0 AS runtime
-COPY --from=build /app/output .
-
+WORKDIR /app
+COPY --from=buildStage /app/buildOutputDir .
+COPY aspnetapp.pfx .
+EXPOSE 81
 ENTRYPOINT ["dotnet", "CommandsRegistry.WebUI.dll"]

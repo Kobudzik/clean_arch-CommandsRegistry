@@ -94,14 +94,14 @@ namespace CommandsRegistry.WebUI
                 app.UseExceptionHandler("/Error");
                 // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
                 app.UseHsts();
-                app.UseHttpsRedirection();
+                //app.UseHttpsRedirection();
             }
 
             // Re-write path only. / to /index.html
-            app.UseDefaultFiles();
+            //app.UseDefaultFiles();
 
             // Start serve files from wwwroot (Must be after UseDefaultFiles obviously.)
-            app.UseSpaStaticFiles();
+            //app.UseSpaStaticFiles();
 
             app.UseHealthChecks("/health");
 
@@ -117,11 +117,11 @@ namespace CommandsRegistry.WebUI
             // Placed after normal routes, at end of pipeline, 
             // i.e. if request path did not match static content 
             // nor other routes, fallback to SPA
-            app.UseSpa(spa =>
-            {
-                if (env.IsDevelopment())
-                    spa.UseProxyToSpaDevelopmentServer("http://localhost:8080/");
-            });
+            //app.UseSpa(spa =>
+            //{
+            //    if (env.IsDevelopment())
+            //        spa.UseProxyToSpaDevelopmentServer("http://localhost:8080/");
+            //});
         }
 
         public static HealthCheckResult GetHealthByPinging(string address)
